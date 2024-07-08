@@ -185,6 +185,7 @@ const App = () => {
         </div>
         <h3 style={{fontSize: 24, margin: '8px 0px'}}>Người thực hiện: <span style={{fontWeight: 'normal'}}>{task?.task_owner.text}</span></h3>
         <h3 style={{fontSize: 24, margin: '8px 0px'}}>Mức độ ưu tiên: <span style={{fontWeight: 'normal'}}>{task?.task_priority.text == '' ? 'Chưa thiết lập': task?.task_priority.text}</span></h3>
+        <h3 style={{fontSize: 24, margin: '8px 0px'}}>Time line: <span style={{fontWeight: 'normal'}}>{task?.timelines.text == '' ? 'Chưa thiết lập': task?.timelines.text}</span></h3>
       </Modal>
             </div>
 
