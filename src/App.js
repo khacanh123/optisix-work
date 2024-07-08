@@ -176,8 +176,9 @@ const App = () => {
         onClose={() => setOpened(false)}
         title="Chi tiết công việc"
         size={"lg"}
+        zIndex={999999}
       >
-        <h3 style={{fontSize: 24, margin: '8px 0px'}}>Tên task: <span style={{fontWeight: 'normal'}}>{task?.title}</span></h3>
+        <h3 style={{fontSize: 24, margin: '8px 0px'}}>Tên công việc: <span style={{fontWeight: 'normal'}}>{task?.title}</span></h3>
         <div style={{display: 'flex', alignItems: 'center', gap: 4}}>
         <h3 style={{fontSize: 24, margin: '8px 0px'}}>Trạng thái: </h3>
         <div className='label-intro' style={{backgroundColor: getColorForLabel(task?.task_status?.text), fontSize: 20}}>{task?.task_status.text}</div>
