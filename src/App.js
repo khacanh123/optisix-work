@@ -297,8 +297,8 @@ const App = () => {
                                     <tr className='h-[57px]' key={i}>
                                    {
                                     list.map((taskItem) => (
-                                        <td>
-                                        <div className="circle" data-value={taskItem.task.length} onClick={() => {
+                                        <td 
+                                        onClick={() => {
                                             
                                             setDetailTask({
                                                 task: taskItem.task,
@@ -306,7 +306,10 @@ const App = () => {
                                                 user: taskItem.user
                                             })
                                             setOpened(true)
-                                        }}/>
+                                        }}
+                                        className='cursor-pointer'
+                                        >
+                                        <div className="circle" data-value={taskItem.task.length}/>
                                     </td>
                                     ))
                                    }
