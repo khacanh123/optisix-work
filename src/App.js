@@ -1,4 +1,4 @@
-import { Modal, Select, Table } from '@mantine/core';
+import { LoadingOverlay, Modal, Select, Table } from '@mantine/core';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -356,6 +356,8 @@ const App = () => {
             </tbody>
         </Table>
       </Modal>
+      <LoadingOverlay visible={visible} overlayBlur={2} />
+      
         </>
 
     )
