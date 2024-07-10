@@ -344,7 +344,7 @@ const App = () => {
                             <td>{i+1}</td>
                             <td>{value.title}</td>
                             <td>
-        <div className='label-intro' style={{backgroundColor: getColorForLabel(value?.task_status?.text), padding: 5}}>{value?.task_status.text}</div>
+                                <div className='label-intro' style={{backgroundColor: getColorForLabel(value?.task_status?.text), padding: 5}}>{value?.task_status.text}</div>
                             </td>
                             <td>{value?.task_priority.text == '' ? 'Chưa thiết lập': value?.task_priority.text}</td>
                         </tr>
