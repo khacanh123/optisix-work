@@ -81,12 +81,77 @@
     text-decoration: none;
     cursor: pointer;
   }
-  
+
+.table-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.fixed-column {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+.fixed-column table,
+.scrollable-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fixed-column th, .fixed-column td,
+.scrollable-table th, .scrollable-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.fixed-column th {
+    background-color: #f2f2f2;
+}
+
+.scrollable-table {
+    overflow-x: auto;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+}
+
+.member img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #add8e6;
+    display: inline-block;
+    position: relative;
+}
+
+.circle::before {
+    content: attr(data-value);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
     </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script src="https://cdn.tailwindcss.com"></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
