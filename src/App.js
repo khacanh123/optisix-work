@@ -60,7 +60,6 @@ const App = () => {
         return labelColorMapping[text] || "#000000"; // Default to black if the label is not found
     }
     const getTaskByUser = (week, listTask) => {
-        // console.log(week);
        return listUser.map((user) => {
             const taskByUser = [];
             week.map((w) =>{
